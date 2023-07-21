@@ -1,2 +1,2 @@
 # zola_jewellery
-It's as e-commerce jewellery website. 
+It's an e-commerce jewellery website. 
