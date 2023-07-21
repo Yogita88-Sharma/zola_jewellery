@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        p:hover::before {
+            visibility: visible;
+            width: 18.32;
+        }
+        [class*="col-"] {
+            width: 100%;
+            }
+
+            @media only screen and (min-width: 600px) {
+            .example {background: green;}
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+            .example {background: blue;}
+            } 
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+            .example {background: orange;}
+            } 
+
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) {
+            .example {background: pink;}
+            }
+
+        body{
+            font-family: 'Roboto';
+        }
+        .column {
+            float: left;
+            width: 29.33%;
+            border: 2px;
+            content: hidden;
+            position: relative;
+            column-gap: 90px;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            /* background-color: #2ece96; */
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* header{
+            background-image: url(../JewelleryShop/heart.png);
+        } */
+        #freeGift {
+            transform: rotateX(150deg);
+        }
+
+        .column:hover .overlay {
+            height: 100%;
+        }
+
+        .texxt {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            /* position: vsticky; */
+        }
+
+        li {
+            display: inline-block;
+            /* float: right; */
+            border-radius: 1px solid #bbb;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 8px 10px;
+            text-decoration: none;
+        }
+
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+            background-color: #111;
+        }
+
+        img {
+            align-items: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        footer{
+            background-image: linear-gradient(rgb(237, 163, 175),rgb(234, 107, 128),rgb(236, 78, 104));
+        }
+        .column:hover {
+            visibility: visible;
+
+        }
+
+        .bg {
+            background-image: url('../JewelleryShop/Banner/pearl.webp');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #grad1 {
+            height: 200px;
+            width: 500px;
+            /* background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); */
+            /* background: linear-gradient(132deg, rgb(54, 163, 253) 0.00%, rgb(254, 207, 215) 100.00%); */
+             background-color: white;
+        }
+
+        .column1 {
+            margin-top: 10px;
+        }
+
+        #niche {
+            align-items: center;
+        }
+
+        @media screen and (max-width: 1000px) {
+            div.dis {
+                display: none;
+            }
+
+            @media only screen and (min-width: 600px) {
+            /* For tablets: */
+            .cal-1 {width: 8.33%;}
+            .cal-2 {width: 16.66%;}
+            .cal-3 {width: 25%;}
+            .cal-4 {width: 33.33%;}
+            .cal-5 {width: 41.66%;}
+            .cal-6 {width: 50%;}
+            .cal-7 {width: 58.33%;}
+            .cal-8 {width: 66.66%;}
+            .cal-9 {width: 75%;}
+            .cal-10 {width: 83.33%;}
+            .cal-11 {width: 91.66%;}
+            .cal-12 {width: 100%;}
+            }
+
+            @media only screen and (min-width: 768px) {
+            /* For desktop: */
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+            }
+    </style>
+</head>
+
+<body>
+    <header class="dis" align="center" style="background-color: pink"> <span id="freeGift">
+            <marquee behavior="" direction="left"> FREEGIFT above 2000! CODE FAME.....FREEGIFT above 2000! CODE
+                FAME.....FREEGIFT above 2000! CODE FAME.....FREEGIFT above 2000! CODE FAME..... </marquee>
+        </span>
+        <br><img src="../JewelleryShop/heart.png" alt="" align="left">
+    </header>
+    <br> <br> <br>
+    <div class="heading">
+        <ul>
+            <li><a href="#" disabled >10+1 MONTHLY PLAN</a></li>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">NEW OFFERS</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">ABOUT</a></li> &times;
+            <li align="right"><a href="../JewelleryShop/html-login-page-with-javascript-validation/index.html" target="_blank">LOGIN    
+
+            </a></li>
+
+        </ul>
+          
+
+              <!-- <li align="right"><a href="../JewelleryShop/html-login-page-with-javascript-validation/index.html">LOGIN</a></li> -->
+        
+    </div>
+    <br>
+
+    <div class="cal-1">
+        <a href="#" target="_blank">
+            <img src="../JewelleryShop/Banner/20%off_image.webp" alt="" align="center"
+                onclick="window.open('summer_blooms.html','_blank');" />
+        </a>
+        <!-- <img src="../JewelleryShop/Banner/egale.webp" alt="..." onclick="window.open('activity.html', '_blank');" /> -->
+    </div>
+    <br>
+
+
+    <div class="cal-5">
+        <img src="../JewelleryShop/Banner/image.webp" alt="" align="center"
+            onclick="window.open('summer_blooms.html','_blank');" />
+    </div>
+    <br>
+
+
+    <div class="cal-2">
+        <img src="../JewelleryShop/Banner/contempory love.webp" alt="" align="center"
+            onclick="window.open('summer_blooms.html','_blank');" />
+    </div>
+    <br>
+
+    <div class="cal-3">
+        <img src="../JewelleryShop/Banner/egale.webp" alt="" align="center"
+            onclick="window.open('summer_blooms.html','_blank');" />
+    </div>
+
+    <br>
+    <div class="cal-4">
+        <img src="../JewelleryShop/Banner/evil_eye.webp" alt="" align="center"
+            onclick="window.open('summer_blooms.html','_blank');" />
+    </div>
+
+    <br>
+    <div class="cal-6">
+        <img src="../JewelleryShop/Banner/necklace.webp" alt="" align="center"
+        onclick="window.open('summer_blooms.html','_blank');"/>
+    </div>
+
+    <br>
+    <div class="cal-7">
+        <img src="../JewelleryShop/Banner/new_light_celebration.webp" alt="" align="center"
+        onclick="window.open('summer_blooms.html','_blank');"/>
+    </div>
+    <br>
+    <br>
+
+    <div class="row">
+        <h1 align="center">ZOLA Stone Promise</h1>
+        <span class="column">
+            <img src="../JewelleryShop/lables/cerified.png" alt="">
+
+            <div class="overlay">
+                <div id="grad1">
+                    <p id="niche" align="center">
+
+                        <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(252, 117, 144); align:center">100% CERTIFIED JEWELLERY<hr></h2><br>
+                        Every piece you get is fully checked for <br>
+                        quality and authenticity by reputed agencies: <br>
+
+                        <b>*</b> GOLD certified with BIS Hallmark. <br>
+                        <b>*</b> DIAMOND certificate of authenticity from IGI, SGL and HKD. <br>
+                        <b>*</b> SOLITAIRES carry a certificate of authenticity from GIA and IGI. <br>
+                    </p>
+                </div>
+            </div>
+        </span>
+
+
+        <span class="column">
+            <img src="../JewelleryShop/lables/refund.png" alt="">
+            <div class="overlay">
+                <div id="grad1">
+                    <p id="niche">
+                        <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(252, 117, 144); align:center">100% REFUND<hr></h2>
+
+                        <!-- <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(252, 117, 144); align:center">100% REFUND</h2> -->
+                        In the rare occasion that you are not fully satisfied <br>
+                         with our product within 30 days of delivery, we will <br>
+                         refund 100% of your money back or exchange it. <br>
+                          No Questions Asked! <br>
+                    </p>
+                </div>
+            </div>
+
+        </span>
+
+        <span class="column">
+            <img src="../JewelleryShop/lables/exchange.png" alt="">
+            <div class="overlay">
+                <div id="grad1">
+                    <p id="niche">
+                        <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(252, 117, 144); align:center">LIFETIME EXCHANGE & BUY BACK<hr></h2>
+
+                        <!-- <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(252, 117, 144); align:center">LIFETIME EXCHANGE & BUY BACK</h2> -->
+                        If ever you feel like exchanging your old BlueStone <br>
+                        Jewellery for newer designs, we are game! Exchange <br>
+                         the product for its current value or get Cash with <br>
+                          just minor deductions. 
+                    </p>
+                </div>
+            </div>
+        </span>
+
+    </div>
+
+    <div class="row" align="center">
+        <span class="column">
+
+            <img src="../JewelleryShop/lables/free_shipping.png" alt="">
+            <div class="overlay" width="10em">
+                <div id="grad1">
+                    <p id="niche">
+                        <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(252, 117, 144); align:center">FREE SHIPPING & INSURANCE<hr></h2>
+                        Yes, it's true, we ship for free. For a 100% <br>
+                         safe purchase, all goods are insured by us <br>
+                          until they reach you securely. 
+                    </p>
+                </div>
+            </div>
+        </span>
+
+
+
+        <span class="column">
+            <img src="../JewelleryShop/lables/try_at_home.png" alt="">
+            <div class="overlay">
+                <!-- <div class="> -->
+                <div id="grad1">
+                    <p id="niche">
+                        <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(252, 117, 144); align:center">TRY JEWELLERY AT HOME <hr> </h2>
+                        Taking you back to the time when jewellery <br>
+                         was brought to you in the comfort of your <br>
+                         home, and chosen in a close huddle with <br>
+                         your loved ones. All you have to do is <br>
+                         shortlist the pieces you want to try and <br>
+                         book your appointment online.
+                    </p>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </span>
+
+
+        <span class="column">
+            <img src="../JewelleryShop/lables/store_near_you.png" alt="">
+            <div class="overlay">
+                <div id="grad1">
+                    <p id="niche">
+                        <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(252, 117, 144); align:center">  PHYSICAL STORE NEAR YOU<hr></h2>
+                        The BlueStone Stores are cool and contemporary <br>
+                        spaces for you to browse through our collections  <br>
+                        at your leisure.
+                    </p>
+                </div>
+            </div>
+        </span>
+
+
+    </div>
+
+    <footer>
+        <span class="row">
+            <span class="column">
+                <h4
+                    style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                   <u> ABOUT US </u></h4>
+                <p>
+                    Who we are? <br>
+                    Management Team <br>
+                    Careers <br>
+                    Franchise Enquiry <br>
+                </p>
+            </span>
+            <span class="column" ,column-gap="40px">
+                <h4
+                    style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                   <u> POLICIES </u></h4>
+                <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                    30-Day Returns <br>
+                    Lifetime Exchange & Buy back <br>
+                    Privacy Policy <br>
+                    Terms & Conditions
+                </p>
+            </span>
+            <span class="column" ,column-gap="40px">
+                <h4
+                    style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                   <u> JEWELLERY GUIDE </u></h4>
+                <p>
+                    Buying and Price Guide <br>
+                    Certification Guide<br>
+                    Diamond and Solitaire Guide<br>
+                    Gemstone Guide<br>
+                    Gifting Guide<br>
+                    Jewellery Care Guide 
+                    <!-- <img src="../JewelleryShop/heart.png" alt=""> -->
+
+                </p>
+            </span>
+        </span>
+        <br>
+        <div class="row">
+            <div class="column">
+                <h4
+                    style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                   <u> CUSTOMER DELIGHT </u></h4>
+                <P>
+                    Contact Us <br>
+                    FAQ <br>
+                    181221512215 <br>
+                    (9am-10pm, 7 days a week)
+                </P>
+            </div>
+
+            <div class="column">
+                <h4
+                    style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                   <u> SHOP WITH CONFIDENCE</u></h4>
+
+                    <p>
+                        Why buy from us?
+                        <br>
+                        Our Certificate <br>
+                        Press Room <br>
+                        Corporate Gifting <br> 
+
+                        <!-- <img src="heart.png" alt=""> -->
+                    </p>
+            </div>
+
+            <div class="row">
+                <img src="../JewelleryShop/heart.png" alt="">
+
+            </div>
+          
+    </footer>
+</body>
+
+</html>
